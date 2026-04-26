@@ -9,7 +9,7 @@ const configName = searchParams.get('config')?.replaceAll(/[^a-z_-]/g, '') ?? 'c
 const configRes = await fetch(`/flasher/${configName}.json`);
 const config = await configRes.json();
 
-const githubRes = await fetch('/flasher/releases');
+const githubRes = await fetch('https://flasher.meshcore.io/releases');
 const github = await githubRes.json();
 
 const commandReference  = {
